@@ -1,0 +1,22 @@
+//DB Connection
+
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "mydb"
+
+
+//Put
+sql = "UPDATE events SET agenda =('"+req.body.agenda+ "') WHERE user_id=('"+req.body.user_id+"') ";
+
+//Post
+con.query('INSERT INTO events (user_id, date,agenda,start_time,end_time,mode,status)   values (("'+req.body.user_id+'"),("'+req.body.date+'"),("'+req.body.agenda+'"),("'+req.body.start_time+'"),("'+req.body.end_time+'"),("'+req.body.mode+'"),("'+req.body.status+'"))'
+
+//Delete
+
+"DELETE from events WHERE agenda = ('"+req.body.agenda+"')"
+
+//get
+con.query("SELECT * from events",
+
+
